@@ -1,0 +1,90 @@
+:root {
+    --darkBlue: #111a28;
+    --matooBlack: #1d293a;
+    --white: #ffffff;
+    --lightGreen: #00cf5d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--darkBlue);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 300px;
+    background: white;
+}
+
+.container p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.container input {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid var(--darkBlue);
+    outline: none;
+}
+
+.container input:focus {
+    border: 1px solid var(--lightGreen);
+}
+
+.container button {
+    background: var(--matooBlack);
+    color: aqua;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 0px transparent;
+    transition: all 0.5s;
+}
+
+.container .imgBox {
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.container .imgBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+.showImg {
+    max-height: 300px;
+    margin: 0 auto;
+    border: 1px solid #d1d1d1;
+}
+
+.container .footer {
+    font-size: 10px;
+    padding-top: 10px;
+}
