@@ -3,10 +3,26 @@ const qrImg = document.querySelector(".qrImg");
 const data = document.querySelector(".data");
 const btn = document.querySelector("button");
 
-
-btn.addEventListener("click", function () {
-    if (data.value != 0 || data.value != '') {
+function qr() {
+    if (data.value != '') {
+        console.log(data.value);
         qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + data.value;
-        imgBox.classList.add(".showImg");
+        imgBox.classList.add("showImg");
+    } else {
+        data.classList.add("error");
+        setTimeout(function () {
+            data.classList.remove("error");
+        }, 1000);
+    }
+}
+
+btn.addEventListener("click", qr);
+
+
+data.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        qr();
+
     }
 });

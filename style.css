@@ -47,6 +47,7 @@ body {
     border-radius: 10px;
     border: 1px solid var(--darkBlue);
     outline: none;
+    font-size: 17px;
 }
 
 .container input:focus {
@@ -56,7 +57,7 @@ body {
 .container button {
     background: var(--matooBlack);
     color: aqua;
-    padding: 10px 15px;
+    padding: 16px 15px;
     font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
@@ -64,6 +65,7 @@ body {
     border: none;
     box-shadow: 0px 0px 0px transparent;
     transition: all 0.5s;
+    width: 100%;
 }
 
 .container .imgBox {
@@ -80,9 +82,39 @@ body {
 
 .showImg {
     max-height: 300px;
-    margin: 0 auto;
+    margin: 5px auto;
     border: 1px solid #d1d1d1;
 }
+
+.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+
+
+}
+
+
 
 .container .footer {
     font-size: 10px;
