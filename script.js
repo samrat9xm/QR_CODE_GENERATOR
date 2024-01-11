@@ -4,9 +4,9 @@ const data = document.querySelector(".data");
 const btn = document.querySelector("button");
 
 function qr() {
-    if (data.value != '') {
-        console.log(data.value);
+    if (data.value.trim() != '') {
         qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + data.value;
+
         imgBox.classList.add("showImg");
     } else {
         data.classList.add("error");
